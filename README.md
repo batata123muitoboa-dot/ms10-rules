@@ -4,6 +4,9 @@ A configurable mouse button remapper for Linux.
 
 MS-10 Rules lets you customize your mouse buttons with flexible actions, triggers and profiles through a graphical interface.
 
+> [!IMPORTANT]
+> If the installer is taking too long, DO NOT cancel it. It may take long but it works.
+
 ## Features
 
 - Custom mouse button assignments
