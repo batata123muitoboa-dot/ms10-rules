@@ -118,7 +118,7 @@ Make sure the installer configured the required udev rules and device permission
 
 ## License
 
-MS-10 Rules is licensed under the Apache License 2.0.
+MS-10 Rules is licensed under the Apache-2.0 License.
 
 See the LICENSE file for the complete license text.
 
