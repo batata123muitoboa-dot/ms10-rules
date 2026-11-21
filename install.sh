@@ -6,7 +6,7 @@ readonly ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 readonly BIN_DIR="$HOME/.local/bin"
 readonly UNIT_DIR="$HOME/.config/systemd/user"
 readonly DATA_DIR="$HOME/.config/ms10-rules"
-readonly UDEV_RULE="/etc/udev/rules.d/99-ms10-rules.rules"
+readonly UDEV_RULE="/etc/udev/rules.d/72-ms10-rules.rules"
 readonly MODULE_CONFIG="/etc/modules-load.d/ms10-rules.conf"
 readonly PACKAGES=(python-evdev gtk4 python-gobject xdg-utils acl)
 readonly COMMANDS=(pacman sudo systemctl udevadm modprobe install setfacl readlink python)
@@ -38,7 +38,8 @@ install -Dm644 "$ROOT/share/applications/ms10-rules.desktop" "$HOME/.local/share
 install -Dm644 "$ROOT/systemd/ms10-rules.service" "$UNIT_DIR/ms10-rules.service"
 install -d "$DATA_DIR"
 
-sudo install -Dm644 "$ROOT/udev/99-ms10-rules.rules" "$UDEV_RULE"
+sudo rm -f /etc/udev/rules.d/99-ms10-rules.rules
+sudo install -Dm644 "$ROOT/udev/72-ms10-rules.rules" "$UDEV_RULE" 
 module_config="$(mktemp)"
 printf 'uinput\n' > "$module_config"
 sudo install -Dm644 "$module_config" "$MODULE_CONFIG"

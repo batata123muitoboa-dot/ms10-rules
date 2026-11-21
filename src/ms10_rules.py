@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any
 
 APP_NAME = "MS-10 Rules"
-APP_VERSION = "0.2.3"
+APP_VERSION = "1.0.1"
 VENDOR_ID = "3151"
 PRODUCT_ID = "3020"
 CONFIG_DIR = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "ms10-rules"
