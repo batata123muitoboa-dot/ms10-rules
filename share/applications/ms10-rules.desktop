@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=MS-10 Rules
+Comment=Configure button rules for the HMaston MS-10 mouse
+Exec=ms10-rules gui
+Icon=input-mouse
+Terminal=false
+Categories=Settings;HardwareSettings;
+StartupNotify=true

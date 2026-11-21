@@ -1,0 +1,14 @@
+[Unit]
+Description=MS-10 Rules input remapping service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/ms10-rules daemon
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
